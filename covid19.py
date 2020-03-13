@@ -32,11 +32,18 @@ def readData():
 
 
 def calDeltas(yCNum, yANum, yClNum, yRNum, yDNum, todayValues):
+    """
+    Calculate the differences from yesterday's numbers.
+
+    This code will print to the terminal and right now, doesn't write to a
+    file.
+    """
+    # Initialize an array to hold int data
     intVals = []
     for i in range(len(todayValues)):
         # Convert string values to intergers:
         intVals.append(int(todayValues[i].replace(',', '')))
-
+    # Calculate and print case differences
     caseNumDiff = intVals[0] - yCNum
     if intVals[0] > yCNum:
         print(f'The total number of cases increased by {caseNumDiff}'
@@ -45,9 +52,9 @@ def calDeltas(yCNum, yANum, yClNum, yRNum, yDNum, todayValues):
         print('Hallelujah, no additional cases!')
     else:
         print(
-            f'Hopefully, we have turned the corner. There are {abs(caseNumDiff)}'
-            f' less cases today!')
-
+            f'Hopefully, we have turned the corner. There are '
+            f'{abs(caseNumDiff)} less cases today!')
+    # Calculate and print active case differences
     caseActiveDiff = intVals[3] - yANum
     if intVals[3] > yANum:
         print(f'Active cases increased by {caseActiveDiff} people')
@@ -55,9 +62,9 @@ def calDeltas(yCNum, yANum, yClNum, yRNum, yDNum, todayValues):
         print('Hallelujah, no additional active cases!')
     else:
         print(
-            f'Hopefully, we have turned the corner. There are {abs(caseActiveDiff)}'
-            f' less active cases today!')
-
+            f'Hopefully, we have turned the corner. There are '
+            f'{abs(caseActiveDiff)} less active cases today!')
+    # Calculate and print death differences
     caseDeathDiff = intVals[1] - yDNum
     if caseDeathDiff > 1:
         print(f'Unfortunately, {caseDeathDiff} people died yesterday')
@@ -65,13 +72,13 @@ def calDeltas(yCNum, yANum, yClNum, yRNum, yDNum, todayValues):
         print(f'Unfortunately, {caseDeathDiff} person died yesterday')
     else:
         print('Hallelujah, no additional deaths!')
-
+    # Calculate and print closed case differences
     caseClosedDiff = intVals[4] - yClNum
     if caseClosedDiff > 0:
         print(f'Closed cases increased by {caseClosedDiff}')
     else:
         print('No change in closed cases...')
-
+    # Calculate and print recovered case differences
     caseRecoveredDiff = intVals[2] - yRNum
     if caseRecoveredDiff > 0:
         print(f'{caseRecoveredDiff} people recovered!!!')
