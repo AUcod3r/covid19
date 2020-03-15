@@ -108,7 +108,8 @@ soup = BeautifulSoup(html_source, 'lxml')
 
 today = dt.datetime.today().strftime("%A, %d %B %Y")
 
-# Print to the terminal
+# Print to the terminal after clearing screen
+os.system('clear')
 print(
     "\n************* United States of America COVID-19 Data ***************\n")
 print("Today's date:", today)
