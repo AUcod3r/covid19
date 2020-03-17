@@ -5,3 +5,4 @@ Friday, 13 March 2020 - USA COVID-19 cases today:  2,084   - Active cases: 2,012
 Saturday, 14 March 2020 - USA COVID-19 cases today:  2,329   - Active cases: 2,238 - Closed cases: 91 - Recovered:  41  - Deaths:  50 
 Sunday, 15 March 2020 - USA COVID-19 cases today:  3,045   - Active cases: 2,929 - Closed cases: 116 - Recovered:  56  - Deaths:  60 
 Monday, 16 March 2020 - USA COVID-19 cases today:  3,806   - Active cases: 3,664 - Closed cases: 142 - Recovered:  73  - Deaths:  69 
+Tuesday, 17 March 2020 - USA COVID-19 cases today:  6,340   - Active cases: 6,128 - Closed cases: 212 - Recovered:  106  - Deaths:  106 
