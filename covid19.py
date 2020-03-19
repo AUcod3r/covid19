@@ -94,7 +94,7 @@ def writeData():
     """
     with open('covidData.txt', 'a') as f:
         f.write(
-            f'{today} - USA COVID-19 cases today: {values[0]} - Active cases:'
+            f'{today} - Cases today: {values[0]} - Active cases:'
             f' {values[3]} - Closed cases: {values[4]} - Recovered: '
             f'{values[2]} - Deaths: {values[1]}\n')
 
@@ -106,7 +106,7 @@ html_source = (requests.get
 # Create the BeautifulSoup object from the source code
 soup = BeautifulSoup(html_source, 'lxml')
 
-today = dt.datetime.today().strftime("%A, %d %B %Y")
+today = dt.datetime.today().strftime("%m-%d-%Y")
 
 # Print to the terminal after clearing screen
 os.system('clear')
@@ -118,12 +118,12 @@ labels = []
 values = []
 # Grab the labels and values from the appropriate divs
 for headline in soup.find_all('div', id='maincounter-wrap'):
-    labels.append(headline.h1.text)
-    values.append(headline.find(class_='maincounter-number').text)
+    labels.append(headline.h1.text.strip(' \n'))
+    values.append(headline.find(class_='maincounter-number').text.strip(' \n'))
 # Grab the labels and values from the appropriate divs
 for cases in soup.find_all('div', class_='col-md-6'):
-    labels.append(cases.find(class_='panel-heading').text)
-    values.append(cases.find(class_='number-table-main').text)
+    labels.append(cases.find(class_='panel-heading').text.strip(' \n'))
+    values.append(cases.find(class_='number-table-main').text.strip(' \n'))
 # Print to the terminal
 for i in range(len(labels)):
     print(labels[i], values[i])
