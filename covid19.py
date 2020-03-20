@@ -23,11 +23,11 @@ def readData():
         for line in fRead:
             pass
         last = line.split(' ')
-        yestCaseNum = int(last[10].replace(',', ''))
-        yestActive = int(last[16].replace(',', ''))
-        yestClosed = int(last[20].replace(',', ''))
-        yestRecover = int(last[24].replace(',', ''))
-        yestDeaths = int(last[29].replace(',', ''))
+        yestCaseNum = int(last[4].replace(',', ''))
+        yestActive = int(last[8].replace(',', ''))
+        yestClosed = int(last[12].replace(',', ''))
+        yestRecover = int(last[15].replace(',', ''))
+        yestDeaths = int(last[18].replace(',', ''))
         return yestCaseNum, yestActive, yestClosed, yestRecover, yestDeaths
 
 

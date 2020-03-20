@@ -1,10 +1,11 @@
-Tuesday, 10 March 2020 - USA COVID-19 cases today:  729   - Active cases: 687 - Closed cases: 42 - Recovered:  15  - Deaths:  27 
-Wednesday, 11 March 2020 - USA COVID-19 cases today:  1,015   - Active cases: 969 - Closed cases: 46 - Recovered:  15  - Deaths:  31 
+Tuesday, 10 March 2020 - USA COVID-19 cases today:  729   - Active cases: 687 - Closed cases: 42 - Recovered:  15  - Deaths:  27
+Wednesday, 11 March 2020 - USA COVID-19 cases today:  1,015   - Active cases: 969 - Closed cases: 46 - Recovered:  15  - Deaths:  31
 Thursday, 12 March 2020 - USA COVID-19 cases today:  1,401   - Active cases: 1,346 - Closed cases: 55 - Recovered:  15  - Deaths:  40
-Friday, 13 March 2020 - USA COVID-19 cases today:  2,084   - Active cases: 2,012 - Closed cases: 72 - Recovered:  31  - Deaths:  41 
-Saturday, 14 March 2020 - USA COVID-19 cases today:  2,329   - Active cases: 2,238 - Closed cases: 91 - Recovered:  41  - Deaths:  50 
-Sunday, 15 March 2020 - USA COVID-19 cases today:  3,045   - Active cases: 2,929 - Closed cases: 116 - Recovered:  56  - Deaths:  60 
-Monday, 16 March 2020 - USA COVID-19 cases today:  3,806   - Active cases: 3,664 - Closed cases: 142 - Recovered:  73  - Deaths:  69 
-Tuesday, 17 March 2020 - USA COVID-19 cases today:  6,340   - Active cases: 6,128 - Closed cases: 212 - Recovered:  106  - Deaths:  106 
+Friday, 13 March 2020 - USA COVID-19 cases today:  2,084   - Active cases: 2,012 - Closed cases: 72 - Recovered:  31  - Deaths:  41
+Saturday, 14 March 2020 - USA COVID-19 cases today:  2,329   - Active cases: 2,238 - Closed cases: 91 - Recovered:  41  - Deaths:  50
+Sunday, 15 March 2020 - USA COVID-19 cases today:  3,045   - Active cases: 2,929 - Closed cases: 116 - Recovered:  56  - Deaths:  60
+Monday, 16 March 2020 - USA COVID-19 cases today:  3,806   - Active cases: 3,664 - Closed cases: 142 - Recovered:  73  - Deaths:  69
+Tuesday, 17 March 2020 - USA COVID-19 cases today:  6,340   - Active cases: 6,128 - Closed cases: 212 - Recovered:  106  - Deaths:  106
 Wednesday, 18 March 2020 - USA COVID-19 cases today:  6,524   - Active cases: 6,302 - Closed cases: 222 - Recovered:  106  - Deaths:  116
 03-19-2020 - Cases today: 9,477 - Active cases: 9,214 - Closed cases: 263 - Recovered: 108 - Deaths: 155
+03-20-2020 - Cases today: 14,366 - Active cases: 14,024 - Closed cases: 342 - Recovered: 125 - Deaths: 217
