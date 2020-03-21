@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/Users/im4jc60/.pyenv/shims/python
 """
 COVID-19 webscraper for USA.
 
@@ -7,6 +7,7 @@ created by AUcod3r on 9 March 2020
 Uses the site https://www.worldometers.info/coronavirus/country/us/
 to track infections and dispositions in the USA
 """
+
 from bs4 import BeautifulSoup
 import requests
 import datetime as dt
