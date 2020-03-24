@@ -10,3 +10,6 @@ Wednesday, 18 March 2020 - USA COVID-19 cases today:  6,524   - Active cases: 6,
 03-19-2020 - Cases today: 9,477 - Active cases: 9,214 - Closed cases: 263 - Recovered: 108 - Deaths: 155
 03-20-2020 - Cases today: 14,366 - Active cases: 14,024 - Closed cases: 342 - Recovered: 125 - Deaths: 217
 03-21-2020 - Cases today: 19,969 - Active cases: 19,543 - Closed cases: 426 - Recovered: 147 - Deaths: 279
+03-22-2020 - Cases today: 26,900 - Active cases: 26,374 - Closed cases: 526 - Recovered: 178 - Deaths: 348
+03-23-2020 - Cases today: 35,075 - Active cases: 34,439 - Closed cases: 636 - Recovered: 178 - Deaths: 458
+03-24-2020 - Cases today: 48,778 - Recovered: 295 - Deaths: 588

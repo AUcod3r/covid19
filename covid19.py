@@ -25,14 +25,14 @@ def readData():
             pass
         last = line.split(' ')
         yestCaseNum = int(last[4].replace(',', ''))
-        yestActive = int(last[8].replace(',', ''))
-        yestClosed = int(last[12].replace(',', ''))
+        # yestActive = int(last[8].replace(',', ''))
+        # yestClosed = int(last[12].replace(',', ''))
         yestRecover = int(last[15].replace(',', ''))
         yestDeaths = int(last[18].replace(',', ''))
-        return yestCaseNum, yestActive, yestClosed, yestRecover, yestDeaths
+        return yestCaseNum, yestRecover, yestDeaths
 
 
-def calDeltas(yCNum, yANum, yClNum, yRNum, yDNum, todayValues):
+def calDeltas(yCNum, yRNum, yDNum, todayValues):
     """
     Calculate the differences from yesterday's numbers.
 
@@ -41,6 +41,7 @@ def calDeltas(yCNum, yANum, yClNum, yRNum, yDNum, todayValues):
     """
     # Initialize an array to hold int data
     intVals = []
+    print(todayValues)
     for i in range(len(todayValues)):
         # Convert string values to intergers:
         intVals.append(int(todayValues[i].replace(',', '')))
@@ -55,16 +56,6 @@ def calDeltas(yCNum, yANum, yClNum, yRNum, yDNum, todayValues):
         print(
             f'Hopefully, we have turned the corner. There are '
             f'{abs(caseNumDiff)} less cases today!')
-    # Calculate and print active case differences
-    caseActiveDiff = intVals[3] - yANum
-    if intVals[3] > yANum:
-        print(f'Active cases increased by {caseActiveDiff} people')
-    elif caseActiveDiff == 0:
-        print('Hallelujah, no additional active cases!')
-    else:
-        print(
-            f'Hopefully, we have turned the corner. There are '
-            f'{abs(caseActiveDiff)} less active cases today!')
     # Calculate and print death differences
     caseDeathDiff = intVals[1] - yDNum
     if caseDeathDiff > 1:
@@ -73,13 +64,7 @@ def calDeltas(yCNum, yANum, yClNum, yRNum, yDNum, todayValues):
         print(f'Unfortunately, {caseDeathDiff} person died yesterday')
     else:
         print('Hallelujah, no additional deaths!')
-    # Calculate and print closed case differences
-    caseClosedDiff = intVals[4] - yClNum
-    if caseClosedDiff > 0:
-        print(f'Closed cases increased by {caseClosedDiff}')
-    else:
-        print('No change in closed cases...')
-    # Calculate and print recovered case differences
+
     caseRecoveredDiff = intVals[2] - yRNum
     if caseRecoveredDiff > 0:
         print(f'{caseRecoveredDiff} people recovered!!!')
@@ -95,8 +80,7 @@ def writeData():
     """
     with open('covidData.txt', 'a') as f:
         f.write(
-            f'{today} - Cases today: {values[0]} - Active cases:'
-            f' {values[3]} - Closed cases: {values[4]} - Recovered: '
+            f'{today} - Cases today: {values[0]} - Recovered: '
             f'{values[2]} - Deaths: {values[1]}\n')
 
 
@@ -122,18 +106,18 @@ for headline in soup.find_all('div', id='maincounter-wrap'):
     labels.append(headline.h1.text.strip(' \n'))
     values.append(headline.find(class_='maincounter-number').text.strip(' \n'))
 # Grab the labels and values from the appropriate divs
-for cases in soup.find_all('div', class_='col-md-6'):
-    labels.append(cases.find(class_='panel-heading').text.strip(' \n'))
-    values.append(cases.find(class_='number-table-main').text.strip(' \n'))
+# for cases in soup.find_all('div', class_='col-md-6'):
+#     labels.append(cases.find(class_='panel-heading').text.strip(' \n'))
+#     values.append(cases.find(class_='number-table-main').text.strip(' \n'))
 # Print to the terminal
 for i in range(len(labels)):
     print(labels[i], values[i])
 print()
 # Read yeseterday's data
-yCNum, yANum, yClNum, yRNum, yDNum = readData()
+yCNum, yRNum, yDNum = readData()
 
 # Caluculate and print the deltas
-calDeltas(yCNum, yANum, yClNum, yRNum, yDNum, values)
+calDeltas(yCNum, yRNum, yDNum, values)
 
 # Call the function to write today's data
 writeData()
