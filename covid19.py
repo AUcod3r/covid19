@@ -24,11 +24,12 @@ def readData():
         for line in fRead:
             pass
         last = line.split(' ')
+        print(last)
         yestCaseNum = int(last[4].replace(',', ''))
         # yestActive = int(last[8].replace(',', ''))
         # yestClosed = int(last[12].replace(',', ''))
-        yestRecover = int(last[15].replace(',', ''))
-        yestDeaths = int(last[18].replace(',', ''))
+        yestRecover = int(last[7].replace(',', ''))
+        yestDeaths = int(last[10].replace(',', ''))
         return yestCaseNum, yestRecover, yestDeaths
 
 
@@ -41,7 +42,6 @@ def calDeltas(yCNum, yRNum, yDNum, todayValues):
     """
     # Initialize an array to hold int data
     intVals = []
-    print(todayValues)
     for i in range(len(todayValues)):
         # Convert string values to intergers:
         intVals.append(int(todayValues[i].replace(',', '')))
