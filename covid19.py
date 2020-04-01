@@ -26,8 +26,6 @@ def readData():
         last = line.split(' ')
         print(last)
         yestCaseNum = int(last[4].replace(',', ''))
-        # yestActive = int(last[8].replace(',', ''))
-        # yestClosed = int(last[12].replace(',', ''))
         yestRecover = int(last[7].replace(',', ''))
         yestDeaths = int(last[10].replace(',', ''))
         return yestCaseNum, yestRecover, yestDeaths
