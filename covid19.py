@@ -24,7 +24,6 @@ def readData():
         for line in fRead:
             pass
         last = line.split(' ')
-        print(last)
         yestCaseNum = int(last[4].replace(',', ''))
         yestRecover = int(last[7].replace(',', ''))
         yestDeaths = int(last[10].replace(',', ''))
